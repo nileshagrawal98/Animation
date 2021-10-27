@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curves, Paths SVG</title>
+    <style>
+        .animation_move_path{
+            animation: move 3s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(-100px);
+            }
+            to{
+                transform: translate(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="200" height="200" viewBox="0 0 200 200">
+        <defs>
+            <path d="M -100 100 L -50 50 L 0 100  L 50 50 L 100 100 L 150 50 L 200 100 L 250 50 L 300 100" fill="none" stroke="black"
+                stroke-width="10" id="wave_path" class="animation_move_path"/>
+                <clipPath id="circle_clip">
+                    <circle cx="100" cy="100" r="100">
+                </clipPath>
+        </defs>
+        <g clip-path="url(#circle_clip)">
+            <circle cx="100" cy="100" r="100" fill="pink" />
+            <use href="#wave_path" y="-50"></use>
+            <use href="#wave_path" y="0"></use>
+            <use href="#wave_path" y="50"></use>
+            <use href="#wave_path" y="100"></use>
+        </g>
+    </svg>
+
+</body>
+
+</html>
