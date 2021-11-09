@@ -9,3 +9,4 @@ This repo is used for animation elective's assignment.
     - Curve, Paths SVG - II
 - ### Canvas
     - Canvas - I
+    - Canvas - II & III
