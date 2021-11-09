@@ -7,3 +7,5 @@ This repo is used for animation elective's assignment.
     - Trees and Sun SVG
     - Curve, Paths SVG - I
     - Curve, Paths SVG - II
+- ### Canvas
+    - Canvas - I
